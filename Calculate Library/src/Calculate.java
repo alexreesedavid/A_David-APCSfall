@@ -30,4 +30,14 @@ public class Calculate {
 		double answer = degrees * (3.14159/180);
 		return answer;
 	}
+	public static double discriminant (double variableA, double variableB, double variableC) {//input are coefficients for quadratic equation then returns the discriminant
+		double answer = (variableB * variableB) - 4 * variableA * variableC;
+		return answer;
+	}
+	public static String improperFrac (int whole, int numerator, int denominator) {//input a mixed number and change to improper fraction
+		int ansNumerator = whole * denominator;
+		String improperFrac =  "ansNumerator / denominator";
+		return String improperFrac;
+	}
+	
 }

@@ -2,7 +2,7 @@
 public class DoMath {
 
 	public static void main(String[] args) {
-		System.out.println(Calculate.toDegrees(2));
+		System.out.println(Calculate.discriminant(2,2,4));
 
 	}
 
