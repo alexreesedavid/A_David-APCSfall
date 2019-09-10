@@ -34,10 +34,20 @@ public class Calculate {
 		double answer = (variableB * variableB) - 4 * variableA * variableC;
 		return answer;
 	}
-	public static String improperFrac (int whole, int numerator, int denominator) {//input a mixed number and change to improper fraction
-		int ansNumerator = whole * denominator;
-		String improperFrac =  "ansNumerator / denominator";
-		return String improperFrac;
+	public static String toImproperFrac(int whole, int numerator, int denominator) {// input in a mixed number and output that number as an improper fraction
+		int newNumerator = (whole * denominator) + numerator;
+		return newNumerator + "/" + denominator;
+	}
+	public static String toMixedNum(int numerator, int denominator) { // input in an improper fraction and output that fraction as a mixed number
+		int whole = numerator / denominator;
+		int newNumerator = numerator % denominator;
+		return whole + " " + newNumerator + "/" + denominator;
+	}
+	public static String foil(int a, int b, int c, int d, String variable) { //converts binomial expression(ax + b)(cx + d) to quadratic equation ax^2 + bx + c; input variable correspond to (ax + b)(cx + d) form with x standing in as "variable"
+		int quadraticA = a * c;
+		int quadraticB = (b * c) + (a * d);
+		int quadraticC = b * d;
+		return quadraticA + variable + "^2" + "+" + quadraticB + variable + "+" + quadraticC;
 	}
 	
 }
