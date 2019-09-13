@@ -88,7 +88,7 @@ public class Calculate {
 		double nRounded = (int) rounded;
 		return nRounded/100;
 	}
-	public static double exponent (double exponee, int exponent) { // exponee to the exponent th power
+	public static double exponent (double exponee, int exponent) { // exponee to the exponent-th power
 		double ans = exponee;
 		int n = 1;
 		while (n < exponent) {
@@ -97,5 +97,26 @@ public class Calculate {
 		}
 		return ans;
 	}
-	
+	public static int factorial (int number) { //find factorial of input 
+		int ans = 1;
+		while (number > 0) {
+			ans = number * ans;
+			number--;
+		}
+		return ans;
+	}
+	public static boolean isPrime (int number) { //checks if a number is prime
+		int factor = 2;
+		while (number % factor != 0) {
+			factor++;
+		}
+		if (factor == number) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	public static int gcf (int number1, int number2) { 
+		
+	}
 }
