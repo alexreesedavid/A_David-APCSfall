@@ -117,6 +117,10 @@ public class Calculate {
 		}
 	}
 	public static int gcf (int number1, int number2) { 
-		
+		int lesser = min(number1, number2);
+		int greater = max(number1,number2;)
+		for() {
+			
+		}
 	}
 }
