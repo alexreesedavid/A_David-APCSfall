@@ -67,6 +67,13 @@ public class Calculate {
 			return number2;
 		}
 	}
+	public static int max (int number1, int number2) { //return the greater number inputted (int overload)
+		if (number1 > number2) {
+			return number1;
+		}else{
+			return number2;
+		}
+	}
 	public static double max (double number1, double number2, double number3) { //return the greatest number inputted out of three
 		if (number1 > number2 && number1 > number3) {
 			return number1;
@@ -116,11 +123,24 @@ public class Calculate {
 			return false;
 		}
 	}
-	public static int gcf (int number1, int number2) { 
+	public static int gcf (int number1, int number2) { //find the greatest common factor between two numbers
 		int lesser = min(number1, number2);
-		int greater = max(number1,number2;)
-		for() {
-			
+		int greater = max(number1,number2);
+		int ans = lesser;
+		while (greater%ans != 0) {
+			ans--;
 		}
+		while (lesser%ans !=0) {
+			ans--;
+		}
+		return ans;
+	}
+	public static double sqrt (double number) { //find the approx. square root of a number (this is wrong plz fix)
+		double guess = 10;
+		do {
+			double ans = 0.5*(number/guess + guess);
+			guess = ans;
+		}while (guess %10 != 0) ;
+		return guess;
 	}
 }
