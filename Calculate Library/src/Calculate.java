@@ -135,12 +135,15 @@ public class Calculate {
 		}
 		return ans;
 	}
-	public static double sqrt (double number) { //find the approx. square root of a number (this is wrong plz fix)
+	public static double sqrt (double number) { //find the approx. square root of a number, rounded to two decimal places
 		double guess = 10;
+		int loop = 1;
 		do {
 			double ans = 0.5*(number/guess + guess);
 			guess = ans;
-		}while (guess %10 != 0) ;
+			loop++;
+		}while (loop <= 10) ; 
+		guess = round2(guess);
 		return guess;
 	}
 }
